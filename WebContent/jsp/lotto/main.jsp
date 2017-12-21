@@ -7,7 +7,7 @@
  <%@ include file="../common/header.jsp" %> 
 <section>
 <article>
- <form action="">
+ <form action="result.jsp">
  	구매금액: <input type="text" name="money" placeholder="게임당 100원 최대 5게임" />
  	<input type="submit" value="전송" />
  </form>

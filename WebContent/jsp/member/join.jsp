@@ -8,14 +8,11 @@
  <%@ include file="../common/nav.jsp" %> 
  <section>
  <article>
- 	<header>
+ 	<header id="#member_header">
  		<hgroup>
  	<h1>비트캠프 회원가입</h1>
  	</hgroup>
- 	</header>
- </article>
- <article>
- <figure>
+ 		<figure>
  			<figcaption>
  			이름	<input  type="text" name="name" value="" placeholder="이름입력" />
  			</figcaption>
@@ -52,11 +49,16 @@
  			</figcaption>
  		</figure>
  		<form action="../burgerking/main.jsp">
- 		<input  type="submit" value="회원가입"  />
+ 		<input style="width : 150px; height:30px"  type="submit" value="회원가입"  />
  		</form >
-	 	
+ 		<form action="../index.jsp">
+ 		<input style="width : 150px; height:30px" type="submit" value="취소"  />
+ 		</form >	
+ 	</header>
  </article>
  </section>
  <%@ include file="../common/footer.jsp" %> 
 </body>
+<script>
+</script>
 </html> 

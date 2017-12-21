@@ -2,17 +2,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 	<meta charset="UTF-8" />
 	<title>main</title>
 	<link rel="stylesheet" href="../css/common.css" />
 	<link rel="stylesheet" href="../css/index.css" />
+	<script src="../js/index.js"></script>
 </head>
 <body>
-<div id="wrapper">
 	<header id="index_header">
 		<h1>BIT CAMP MAIN</h1>
 	</header>
+<div id="wrapper">
 	<section id="index_section">
 		<article>
 			<table id="index_table">
@@ -35,23 +35,15 @@
 			 	</tr>
 		</table>	 	
 	</form>
-			<a id="click_me" href="#"> 처음 오셨어요?</a>		
-		<a href="member/join.jsp"><input type="submit" value="회원가입" /></a>
+			<a id="check_admin" href="#" > 관리자</a>		
+			<a id="go_join" href="#" > 회원가입</a>		
 		</td>
-	</tr>
+	</tr>	
 	</table>
 		</article>
 	</section>
-<%@ include file="common/footer.jsp" %>
 </div>
+<%@ include file="common/footer.jsp" %>
 </body>
-<script>
-	function showalert(){
-		alert('관리자입니까?')	;
-	}
-	function clickme(){
-		document.getElementById('click_me').onclick = showalert;
-	}
-	window.onload = clickme;
-</script>
 </html>
+   

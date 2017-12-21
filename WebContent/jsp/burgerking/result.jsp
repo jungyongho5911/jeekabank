@@ -31,7 +31,7 @@
 	String coffeePrice = request.getParameter("coffee");
 	String bagelPrice = request.getParameter("bagel");
 	
-	String hamburgerCount = request.getParameter("Shamburger-count");
+	String hamburgerCount = request.getParameter("hamburger-count");
 	String cokeCount = request.getParameter("coke-count");
 	String chipCount = request.getParameter("chip-count");
 	String saladCount = request.getParameter("salad-count");
@@ -78,14 +78,16 @@
 	int pay = 0;
 	for(BurgerkingBean b : list){
 		if(b.getCount()!=""){
-%>			
-			주문한 품목<%=b%> <br />
+%>	
+		주문한 품목<%=b%> <br />		
+			
 <%			
 		pay += Integer.parseInt(b.getCount())*Integer.parseInt(b.getPrice());
 		}	
 	}		
 %>
-		 결제할 금액<%=pay %><br />
+		
+		 결제	할 금액<%=pay %> 원
 </article>		 
 </section>
 <aside></aside>

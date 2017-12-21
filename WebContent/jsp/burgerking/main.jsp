@@ -1,25 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
-<%@ include file="../common/head.jsp" %> 
+<%@ include file="../common/head.jsp" %>
 <body>
 <%@ include file="../common/header.jsp" %> 
  <%@ include file="../common/nav.jsp" %> 
+ <div id="wrapper">
  <section>
  <article>
  	<header>
  		<hgroup>
  		<h1><mark>버거킹 주문 화면</mark></h1>
- 		<h2>상품과 수량을 선택해주세요</h2>
+ 		<h6>상품과 수량을 선택해주세요</h6>
  		</hgroup>	
- 	</header>
+ 	</header>	
  </article>
  <article>
    	<form action="result.jsp" >
 		 <table style="width : 300px; height:0px; margin: 0 auto" >
 		 	<tr>
 		 		<td>
-		 	 
+
 		 	 <figure>  
 		 	 	<img src="../../img/hamburger.jpg" style="width : 200px; height:150px" alt=""  /> 
 		 	<figcaption>
@@ -92,7 +93,6 @@
 			<input type="hidden" name="coffee" value="900" />
 			<input type="hidden" name="bagel" value="2000" />
 			<input type="hidden" name="salad" value="1500" />
-			
 			 	</td>
 		 	</tr>
 		 </table>
@@ -100,6 +100,7 @@
 		</article>
 	</section>
 	<aside></aside>	
+	</div>
 <%@ include file="../common/footer.jsp" %>  
 </body>
 </html>

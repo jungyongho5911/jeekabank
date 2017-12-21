@@ -3,8 +3,8 @@
 <html lang="en">
 <%@ include file="../common/head.jsp" %> 
 <body>
- <%@ include file="../common/nav.jsp" %> 
  <%@ include file="../common/header.jsp" %> 
+ <%@ include file="../common/nav.jsp" %> 
   <section>
   <article>
  <p>카카오메인</p>

@@ -1,63 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Index</title>
-		<style>
-		table{
-			width : 80%; height: 760px; margin: 0 auto;
-		}
-		table tr{
-			width : 100%; height: 50px;border: 1px solid blue;
-		}
-		table tr th{
-			width : 100%; height: 30px;border: 1px solid blue;
-		}
-		
-		table tr td{
-			width : 100%; height: 30px;border: 1px solid blue;
-		}
-		
-		</style>
-	</head>
-	<body>
-	<table>
-		<tr style="height: 10%">
-			<td colspan="5">네비게이션</td>
-		</tr>
-		<tr style="height: 20%">
-			<td style="width :20%; tetx-align: center;">버거킹</td>
-			<td style="width :20%; tetx-align: center;">카카오뱅크</td>
-			<td style="width :20%; tetx-align: center;">비트캠프</td>
-			<td style="width :20%; tetx-align: center;">SKTELECOME</td>
-			<td style="width :20%; tetx-align: center;">로또</td>
-		</tr>
-		<tr style="height: 60%">
+<head>
+
+	<meta charset="UTF-8" />
+	<title>main</title>
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+<div id="wrapper">
+	<header id="index_header">
+		<h1>BIT CAMP MAIN</h1>
+	</header>
+	<section id="index_section">
+		<article>
+			<table id="index_table">
+		<tr id="first_child">
 			<td colspan="5">
-			
-	<div style="width : 300px; height: 200px; margin: 0 auto;" >
-		<p>
-			햄버거 : ￦5,500 <br />
-			콜라 : ￦1,000 <br />
-			감자칩 : ￦1,000 <br />
-			커피 : ￦900 <br />
-			
-		</p>
-		<form action="result.jsp"> 
-			<input type="text" name="menu"  placeholder="메뉴" /><br />
-			<input type="text" name="count" placeholder="수량" /><br />	
-			<input type="hidden" name="hamburger" value="5500" />		
-			<input type="hidden" name="coke" value="1000" />		
-			<input type="hidden" name="chip" value="1000" />		
-			<input type="hidden" name="coffee" value="900" />		
-			<input type="submit" value="전송" />
-		</form>
-	</div>
+				<form action="burgerking/main.jsp">
+					<table id="index_login_box" >					
+			<tr>
+			 		<td id="index_input_id"> 
+			 		<input type="text" placeholder="id"/>
 			</td>
-		</tr>
+			 	<td id="index_input_btn" rowspan="2">
+				 <input type="submit" value="로그인" id="index_input_pass"/>
+			</td>
+			 </tr>
+			 <tr>
+				<td id="index_input_pass">
+			 	<input type="text" name="pass" placeholder="pass"/>
+			 	</td>
+			 	</tr>
+		</table>	 	
+	</form>
+			<a id="click_me" href="#"> 처음 오셨어요?</a>		
+		<a href="member/join.jsp"><input type="submit" value="회원가입" /></a>
+		</td>
+	</tr>
 	</table>
-	
-	
-	</body>
+		</article>
+	</section>
+<%@ include file="common/footer.jsp" %>
+</div>
+</body>
+<script>
+	function showalert(){
+		alert('관리자입니까?')	;
+	}
+	function clickme(){
+		document.getElementById('click_me').onclick = showalert;
+	}
+	window.onload = clickme;
+</script>
 </html>

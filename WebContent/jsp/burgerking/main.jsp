@@ -16,7 +16,7 @@
  	</header>	
  </article>
  <article>
-   	<form action="result.jsp" >
+   	<form id="order_form" action="result.jsp" >
 		 <table style="width : 300px; height:0px; margin: 0 auto" >
 		 	<tr>
 		 		<td>
@@ -86,13 +86,14 @@
 		 		</tr>
 		 	<tr>
 			 	<td colspan="3">
-			<input type="submit" value="전송" style="widht : 200px;margin-right : 20px"  />  
 			<input type="hidden" name="hamburger" value="5500" />		
 			<input type="hidden" name="coke" value="1000" />		
 			<input type="hidden" name="chip" value="1000" />		
 			<input type="hidden" name="coffee" value="900" />
 			<input type="hidden" name="bagel" value="2000" />
 			<input type="hidden" name="salad" value="1500" />
+			
+			<input id="order_btn" type="button" value="전송" style="widht : 200px;margin-right : 20px"  />  
 			 	</td>
 		 	</tr>
 		 </table>
@@ -103,5 +104,6 @@
 	</div>
 <%@ include file="../common/footer.jsp" %>  
 </body>
+<script src="../../js/burgerking.js"></script>
 </html>
 	

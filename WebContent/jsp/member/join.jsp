@@ -14,7 +14,7 @@
  		</hgroup>
  	</header>
  		<form name="join_form" action="../index.jsp">
- 		<table style="margin: auto" id="#member_table"  >
+ 		<table style="margin: auto" id="#main_table"  >
  			<tr >
  				<td>아이디</td>
  				<td>
@@ -82,8 +82,6 @@
  </section>
 </div>
  <%@ include file="../common/footer.jsp" %>
- <script src="../../js/join.js"></script> 
 </body>
-<script>
-</script>
+<script src="../../js/join.js"></script> 
 </html> 

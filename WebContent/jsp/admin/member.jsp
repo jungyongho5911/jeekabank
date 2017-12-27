@@ -59,7 +59,7 @@ try{
 	<link rel="stylesheet" href="../../css/admin.css" />
 	<link rel="stylesheet" href="../../css/common.css" />
 </head>
-<body>
+<body id="body">
 <div id="wrapper">
 	<header id="main_header">
 		<h1>관리자 메인 페이지</h1>
@@ -74,14 +74,14 @@ try{
 		<table id="main_table">
 		<tr>
 		<th>
-		<select style="width:90px; height:40px">
+		<select >
 		<option>ID</option>
 		<option>이름</option>
 		<option>성별</option>
 		</select>
 		</th>
-		 <th colspan="5"><input style="width:500px; height:30px;" type="text" /></th>
-		 <th colspan="2"> <button style="width:150px; height:30px">검색</button></th>
+		 <th colspan="5"><input id= "member_button1" type="text" /></th>
+		 <th colspan="2"> <button id = "member_button2">검색</button></th>
 		</tr>
 			<tr>
 				<th>NO</th>
@@ -114,12 +114,12 @@ try{
 				<td>서울</td>
 			</tr>
 			<tr>
-			<th colspan="8"><button style="width:150px; height:30px;margin-left: 80%;">추가</button></th>
+			<th colspan="8"><button id="add_member_btn">추가</button></th>
 			</tr>
 		</table> 	  
 </section>	
 </div>
-<script src="../../js/admin.js"></script>
+<script src="../../js/member.js"></script>
 </body>
 </html>
    

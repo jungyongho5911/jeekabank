@@ -6,7 +6,9 @@
 	<title>Index</title>
 	<link rel="stylesheet" href="../../css/admin.css" />
 	<link rel="stylesheet" href="../../css/common.css" />
+
 </head>
+
 <body>
 <div id="wrapper">
 	<header id="main_header">

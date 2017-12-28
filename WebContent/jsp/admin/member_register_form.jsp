@@ -46,7 +46,7 @@
 		</table> 	  
 </section>	
 </div>
-<script src="../../js/member.js"></script>
+<script src="../../js/admin/member.js"></script>
 </body>
 </html>
    

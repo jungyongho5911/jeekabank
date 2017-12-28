@@ -6,7 +6,12 @@
 	<title>Index</title>
 	<link rel="stylesheet" href="../../css/admin.css" />
 	<link rel="stylesheet" href="../../css/common.css" />
+<style>
+body{
+background-image:url(../../img/Lighthouse.jpg);
+}
 
+</style>
 </head>
 
 <body>
@@ -44,7 +49,7 @@
 		</table> 	  
 </section>	
 </div>
-<script src="../../js/admin.js"></script>
+<script src="../../js/admin/main.js"></script>
 </body>
 </html>
    

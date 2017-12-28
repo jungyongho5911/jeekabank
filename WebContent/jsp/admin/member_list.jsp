@@ -119,7 +119,7 @@ try{
 		</table> 	  
 </section>	
 </div>
-<script src="../../js/member.js"></script>
+<script src="../../js/admin/member_list.js"></script>
 </body>
 </html>
    

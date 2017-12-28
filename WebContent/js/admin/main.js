@@ -4,6 +4,6 @@ function init() {
 }
 
 function createTable() {
-	location.href = "member.jsp";
+	location.href = "member_list.jsp";
 }
 window.addEventListener("load",init,false);

@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %> 
 <%@ page import = "java.util.*" %> 
+<%@ page import = "com.kabank.jee.domain.MemberBean" %> 
 <%
 Statement stmt = null;
 Connection conn = null;
 String sql = "";
 ResultSet rs= null;
+List<MemberBean> result = new ArrayList<>();
 try{
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",
@@ -24,21 +26,35 @@ try{
 			exist = true;
 			break;
 		}
-		if(!exist){
-			sql = 
-					"CREATE TABLE Member("
-						+"id VARCHAR2(20) PRIMARY KEY,"
-						+"pass VARCHAR2(20),"
-						+"name VARCHAR2(20),"
-						+"ssn VARCHAR2(20),"
-						+"phone VARCHAR2(20),"
-						+"email VARCHAR2(20),"
-						+"profile VARCHAR2(20),"
-						+"addr VARCHAR2(20)"
-							+")";
-			stmt.executeUpdate(sql);
+		
+	}
+	if(!exist){
+		sql = 
+				"CREATE TABLE Member("
+					+"id VARCHAR2(20) PRIMARY KEY,"
+					+"pass VARCHAR2(20),"
+					+"name VARCHAR2(20),"
+					+"ssn VARCHAR2(20),"
+					+"phone VARCHAR2(20),"
+					+"email VARCHAR2(20),"
+					+"profile VARCHAR2(20),"
+					+"addr VARCHAR2(20)"
+						+")";
+		stmt.executeUpdate(sql);
+	}else{
+		rs = stmt.executeQuery("SELECT id,pass,name,ssn,phone,email,profile,addr FROM Member");
+		while(rs.next()){
+			MemberBean m = new MemberBean();
+			m.setId(rs.getString("id"));
+			m.setName(rs.getString("name"));
+			m.setAddr(rs.getString("addr"));
+			m.setEmail(rs.getString("email"));
+			m.setPass(rs.getString("pass"));
+			m.setSsn(rs.getString("ssn"));
+			result.add(m);
 		}
 	}
+	
 }catch(Exception e){
 	e.printStackTrace();
 }finally{
@@ -53,12 +69,7 @@ try{
 %>
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Index</title>
-	<link rel="stylesheet" href="../../css/admin.css" />
-	<link rel="stylesheet" href="../../css/common.css" />
-</head>
+<%@ include file="../common/head.jsp" %>
 <body id="body">
 <div id="wrapper">
 	<header id="main_header">
@@ -93,33 +104,31 @@ try{
 				<th>이메일</th>
 				<th>주소</th>
 			</tr>
-			<tr>
-				<td>2</td>
-				<td>hong</td>
-				<td>홍길동</td>
+				<%
+				for(int i=0; i<result.size(); i++){
+					%>
+					<tr>
+				<td>00</td>
+				<td><%=result.get(i).getId()%></td>
+				<td><%=result.get(i).getName()%></td>
 				<td>1980-01-01</td>
 				<td>남</td>
-				<td>010-1111-2222</td>
-				<td>hong@test.com</td>
-				<td>서울</td>
+				<td><%=result.get(i).getPhone()%></td>
+				<td><%=result.get(i).getEmail()%></td>
+				<td><%=result.get(i).getAddr()%></td>
 			</tr>
-			<tr>
-				<td>1</td>
-				<td>kim</td>
-				<td>김유신</td>
-				<td>1985-02-01</td>
-				<td>여</td>
-				<td>010-1111-2222</td>
-				<td>kim@test.com</td>
-				<td>서울</td>
-			</tr>
+					<%
+				}
+				%>
+			
 			<tr>
 			<th colspan="8"><button id="add_member_btn">추가</button></th>
 			</tr>
 		</table> 	  
 </section>	
 </div>
-<script src="../../js/admin/member_list.js"></script>
+<%@ include file="../common/footer.jsp" %> 
 </body>
+<script src="../../js/admin/member_list.js"></script>
 </html>
    

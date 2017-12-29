@@ -104,6 +104,6 @@
 	</div>
 <%@ include file="../common/footer.jsp" %>  
 </body>
-<script src="../../js/burgerking.js"></script>
+<script src="../../js/burgerking/main.js"></script>
 </html>
 	

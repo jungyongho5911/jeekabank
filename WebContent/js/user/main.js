@@ -14,5 +14,6 @@ function joinConfirm(e) {
 	sessionStorage.setItem('id',joinId);
 	var joinPass = document.querySelector('#join_pass').value;
 	sessionStorage.setItem('pass',joinPass);
+	document.querySelector('#join_form').submit();
 	}
 window.addEventListener("load",init,false);

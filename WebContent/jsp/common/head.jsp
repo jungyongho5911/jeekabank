@@ -11,5 +11,8 @@
    <link rel="stylesheet" href="../../css/lotto.css" />
    <link rel="stylesheet" href="../../css/sktelecom.css" />
    <link rel="stylesheet" href="../../css/member.css" />
+   <link rel="stylesheet" href="../../css/admin.css" />
    </head>
+<body>
+
    

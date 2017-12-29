@@ -1,19 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Index</title>
-	<link rel="stylesheet" href="../../css/admin.css" />
-	<link rel="stylesheet" href="../../css/common.css" />
-<style>
-body{
-background-image:url(../../img/Lighthouse.jpg);
-}
-
-</style>
-</head>
-
+<%@ include file="../common/head.jsp" %>
 <body>
 <div id="wrapper">
 	<header id="main_header">
@@ -49,7 +37,8 @@ background-image:url(../../img/Lighthouse.jpg);
 		</table> 	  
 </section>	
 </div>
-<script src="../../js/admin/main.js"></script>
+<%@ include file="../common/footer.jsp" %> 
 </body>
+<script src="../../js/admin/main.js"></script>
 </html>
    

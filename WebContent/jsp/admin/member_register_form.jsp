@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>Index</title>
-	<link rel="stylesheet" href="../../css/admin.css" />
-	<link rel="stylesheet" href="../../css/common.css" />
-</head>
+<%@ include file="../common/head.jsp" %>
 <body>
 <div id="wrapper">
 	<header id="main_header">
@@ -19,35 +14,39 @@
 	</ul>
 </aside>
 <section id="main_section">
+	<form id="member_register_form" action="member_register.jsp">
 		<table id="main_table">
 		<tr>
-			<td>id : <input type="text" /></td>
+			<td> id:  <input id="table_id" name="id"  type="text" /></td>
+		<tr>
+			<td> pass:  <input id="table_id" name="pass"  type="text" /></td>
 		</tr>
 		
 		<tr>
-			<td>이름 : <input type="text" /></td>
+			<td>이름 : <input id="table_name" name="name" type="text" /></td>
 		</tr>
 		<tr>
-			<td>SSN : <input type="text" /></td>
+			<td>SSN : <input id="table_ssn" name="ssn" type="text" /></td>
 		</tr>
 		<tr>
-			<td>전화번호 : <input type="text" /></td>
+			<td>전화번호 : <input id="table_phone" name="phone" type="text" /></td>
 		</tr>
 		<tr>
-			<td>이메일 : <input type="text" /></td>
+			<td>주소 : <input id="table_addr" name="addr" type="text" /></td>
 		</tr>
-		
 		<tr>
-			<td>주소 : <input type="text" /></td>
+			<td>이메일 : <input id="table_email" name="email" type="text" /></td>
 		</tr>
 			<tr>
-			<td><button id="add_member_btn" style="width:150px; height:30px;margin-left: 80%;">추가</button></td>
+			<td><button id="member_register_btn" style="width:150px; height:30px;margin-left: 80%;"> 추가 </button></td>
 			</tr>
-		</table> 	  
+		</table> 
+	</form>	  
 </section>	
 </div>
-<script src="../../js/admin/member.js"></script>
 </body>
+<script src="../../js/admin/member_register_form.js"></script>
+<%@ include file="../common/footer.jsp" %> 
 </html>
    
    

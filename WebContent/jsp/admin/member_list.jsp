@@ -28,7 +28,7 @@ try{
 		}
 		
 	}
-	if(!exist){
+	if(exist){
 		sql = 
 				"CREATE TABLE Member("
 					+"id VARCHAR2(20) PRIMARY KEY,"

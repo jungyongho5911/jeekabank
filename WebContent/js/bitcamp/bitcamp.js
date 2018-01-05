@@ -6,5 +6,11 @@ function init(){
 					location.href="../"+this.id+"/main.jsp";
 				},false);
 		}
+	document.querySelector('#attend_result').addEventListener('click',click,false);
+}
+function click() {
+	alert('클릭');
+	location.href="result.jsp";
+	
 }
 window.addEventListener("load",init,false);

@@ -13,6 +13,9 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/1027/jse/eclipse/enterprise-edition/jakarta-taglibs-standard-1.1.2/jakarta-taglibs-standard-1.1.2/lib/jstl.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/1027/jse/eclipse/enterprise-edition/jakarta-taglibs-standard-1.1.2/jakarta-taglibs-standard-1.1.2/lib/standard.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/1027/jse/eclipse/enterprise-edition/javax.servlet-3.1.jar/javax.servlet-3.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

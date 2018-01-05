@@ -8,19 +8,19 @@
 </head>
 <body>
 	<%
-	String count = "0";
+	String count = "";
 	try{
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",
 			"bitcamp","bitcamp");
 	Statement stmt = conn.createStatement();
-	String sql = "SELECT (*) FROM tab";
+	String sql = "SELECT (*) AS count FROM tab";
 	ResultSet rs = stmt.executeQuery(sql);
 	
 		while(rs.next()){
 			count = rs.getString("tname");
 		}	
-		System.out.println("테이블이름:" + count);
+		System.out.println("테이블 수량:" + count);
 	} catch (Exception e){
 		e.printStackTrace();
 	}
